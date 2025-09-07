@@ -165,3 +165,49 @@ body.dark .input-box input {
   transform: rotate(20deg) scale(1.1);
   background: rgba(255, 255, 255, 0.5);
 }
+
+/* Magnetic container wraps the button */
+.magnetic-container {
+  display: inline-block;
+  position: relative;
+}
+
+/* Make button positioned relative inside container */
+.magnetic-btn {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect to add scale and subtle glow */
+.magnetic-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 224, 255, 0.6);
+}
+
+/* Entrance animation for the login box */
+@keyframes entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px) scale(1.05);
+  }
+  80% {
+    transform: translateY(-5px) scale(0.98);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Initial state for animated-content */
+.animated-content {
+  opacity: 0;
+}
+
+/* Apply animation when JS toggles 'enter' class */
+.animated-content.enter {
+  animation: entrance 0.8s cubic-bezier(0.25, 1.25, 0.5, 1) forwards;
+}
