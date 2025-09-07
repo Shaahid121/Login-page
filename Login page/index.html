@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Page</title>
+  <title>Login Page with Magnetic Button</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Theme Toggle Button -->
   <button id="theme-toggle" class="theme-btn">🌙</button>
 
   <div class="container">
@@ -22,7 +21,10 @@
           <input type="password" id="password" required />
           <label for="password">Password</label>
         </div>
-        <button type="submit" class="btn">Login</button>
+        <!-- Wrap button for magnetic effect -->
+        <div class="magnetic-container">
+          <button type="submit" class="btn magnetic-btn">Login</button>
+        </div>
         <p class="signup">Don't have an account? <a href="#">Sign Up</a></p>
       </form>
     </div>
